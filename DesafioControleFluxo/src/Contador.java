@@ -14,7 +14,7 @@ public class Contador {
                 contar(parametroUm, parametroDois);
                 
             }catch (ParametrosInvalidosException exception) {
-                //imprimir a mensagem: O segundo parâmetro deve ser maior que o primeiro
+                //imprimir a mensagem: O segundo parâmetro deve ser maior que o primeiro, bonus crie uma msg para quando os valores forem iguais
                 System.out.println(exception.getMessage());
             }		
 		}
@@ -24,7 +24,7 @@ public class Contador {
 		//validar se parametroUm é MAIOR que parametroDois e lançar a exceção
         if (parametroUm > parametroDois)
             throw new ParametrosInvalidosException("O segundo parâmetro deve ser maior que o primeiro");  
-		else if (parametroUm == parametroDois)
+		else if (parametroUm == parametroDois)  // condição bonus para quando os valores forem iguais. 
             throw new ParametrosInvalidosException("Os parametros não devem ser iguais");
             
 		int contagem = parametroDois - parametroUm;
